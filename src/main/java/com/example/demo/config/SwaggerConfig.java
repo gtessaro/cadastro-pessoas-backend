@@ -32,7 +32,7 @@ public class SwaggerConfig {
                 .title("Aplicação de Cadastro de Pessoas")
                 .description("Projeto de Aplicação de Cadastro de Pessoas")
                 .version("0.0.1")
-                .contact(new Contact("Guilherme Tessaro", "https://www.linkedin.com/", "guilherme.tessaro27@gmail.com"))
+                .contact(new Contact("Guilherme Tessaro", "https://www.linkedin.com/in/guilherme-tessaro-70410099/", "guilherme.tessaro27@gmail.com"))
                 .build();
     }
     

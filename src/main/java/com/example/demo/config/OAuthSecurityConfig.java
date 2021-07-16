@@ -14,10 +14,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.example.demo.service.UsuarioService;
 
-//@Configuration
 @EnableWebSecurity
-//@EnableResourceServer
-//@EnableAuthorizationServer
 public class OAuthSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired
@@ -25,15 +22,15 @@ public class OAuthSecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Override
 	public void configure(AuthenticationManagerBuilder auth) throws Exception {
-//		auth.
-//			inMemoryAuthentication()
-//					.withUser("fulano")
-//					.password("123")
-//					.roles("USER");
+		auth.
+			inMemoryAuthentication()
+					.withUser("root")
+					.password("root")
+					.roles("USER");
 		
-		auth
-			.userDetailsService(usuarioService)
-			.passwordEncoder(passwordEncoder());
+//		auth
+//			.userDetailsService(usuarioService)
+//			.passwordEncoder(passwordEncoder());
 		
 	}
 
