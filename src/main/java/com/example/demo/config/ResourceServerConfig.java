@@ -18,10 +18,13 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter{
 			            "/webjars/**" ,
 			            "/swagger.json",
 			            "/v2/api-docs",
-			            "/source/**").permitAll()
+			            "/source/**",
+			            "/h2-console/**").permitAll()
 				.antMatchers("/api/v1/**",
 							 "/api/v2/**").authenticated()
 				.anyRequest().denyAll();
+		
+		http.headers().frameOptions().disable();
 	}
 	
 }

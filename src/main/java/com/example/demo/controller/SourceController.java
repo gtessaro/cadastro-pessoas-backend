@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class SourceController {
 
     @GetMapping("/back-end")
-    @ApiOperation("Acesso ao link do código fonte")
+    @ApiOperation("Acesso ao link do código fonte do backend")
     public String getSourceCodeBackEnd() {
-        return "https://github.com/gtessaro/";
+        return "https://github.com/gtessaro/cadastro-pessoas-backend";
     }
     
     @GetMapping("/front-end")
-    @ApiOperation("Acesso ao link do código fonte")
+    @ApiOperation("Acesso ao link do código fonte do frontend")
     public String getSourceCodeFrontEnd() {
-    	return "https://github.com/gtessaro/";
+    	return "https://github.com/gtessaro/cadsatro-pessoas-frontend";
     }
 }

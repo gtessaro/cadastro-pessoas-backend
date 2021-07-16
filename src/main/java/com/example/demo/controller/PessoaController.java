@@ -58,9 +58,9 @@ public class PessoaController {
     	// Setar data de cadastro
         LocalDateTime dataAtual = LocalDateTime.now();
         DateTimeFormatter formatarData =
-                DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        dataAtual.format(formatarData);
-        pessoa.setDataCadastro(dataAtual);
+                DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm");
+        
+        pessoa.setDataCadastro(dataAtual.format(formatarData));
 
         Pessoa pessoaSalva = pessoaRepository.save(pessoa);
 
@@ -134,9 +134,9 @@ public class PessoaController {
         // Setar data de atualização
         LocalDateTime dataAtual = LocalDateTime.now();
         DateTimeFormatter formatarData =
-                DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        dataAtual.format(formatarData);
-        pessoa.setDataAtualizacao(dataAtual);
+                DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm");
+        
+        pessoa.setDataAtualizacao(dataAtual.format(formatarData));
 
         pessoaRepository.save(pessoa);
         

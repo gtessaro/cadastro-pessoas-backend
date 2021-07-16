@@ -51,8 +51,7 @@ public class Pessoa {
 	private String sexo;
 	
 	@NotNull(message = "Favor preencher campo data de nascimento.")
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private LocalDate dataDeNascimento;
+    private String dataDeNascimento;
 
     private String naturalidade;
     private String nacionalidade;
@@ -61,11 +60,9 @@ public class Pessoa {
     @CPF(message = "Favor preencher um CPF válido.")
     private String cpf;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
-    private LocalDateTime dataCadastro;
+    private String dataCadastro;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
-    private LocalDateTime dataAtualizacao;
+    private String dataAtualizacao;
 
     @Email(message = "Favor preencher um endereço e-mail válido.")
     private String email;
@@ -94,11 +91,11 @@ public class Pessoa {
 		this.sexo = sexo;
 	}
 
-	public LocalDate getDataDeNascimento() {
+	public String getDataDeNascimento() {
 		return dataDeNascimento;
 	}
 
-	public void setDataDeNascimento(LocalDate dataDeNascimento) {
+	public void setDataDeNascimento(String dataDeNascimento) {
 		this.dataDeNascimento = dataDeNascimento;
 	}
 
@@ -126,19 +123,19 @@ public class Pessoa {
 		this.cpf = cpf;
 	}
 
-	public LocalDateTime getDataCadastro() {
+	public String getDataCadastro() {
 		return dataCadastro;
 	}
 
-	public void setDataCadastro(LocalDateTime dataCadastro) {
+	public void setDataCadastro(String dataCadastro) {
 		this.dataCadastro = dataCadastro;
 	}
 
-	public LocalDateTime getDataAtualizacao() {
+	public String getDataAtualizacao() {
 		return dataAtualizacao;
 	}
 
-	public void setDataAtualizacao(LocalDateTime dataAtualizacao) {
+	public void setDataAtualizacao(String dataAtualizacao) {
 		this.dataAtualizacao = dataAtualizacao;
 	}
 
